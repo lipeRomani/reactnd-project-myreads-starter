@@ -11,9 +11,9 @@ class BookListBox extends Component {
                 </div>
                 <div className="list-books-content">
                     <div>
-                        <Shelf title="Currently Reading" books={this.props.shelves.currentlyReading}/>
-                        <Shelf title="Want to read" books={this.props.shelves.wantToRead}/>
-                        <Shelf title="Read" books={this.props.shelves.read}/>
+                        <Shelf title="Currently Reading" shelfId="currentlyReading" books={this.props.books}/>
+                        <Shelf title="Want to read" shelfId="wantToRead" books={this.props.books}/>
+                        <Shelf title="Read" shelfId="read" books={this.props.books}/>
                     </div>
                 </div>
                 <div className="open-search">
