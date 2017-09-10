@@ -7,31 +7,56 @@ import SearchBox from './SearchBox';
 
 class BooksApp extends React.Component {
   state = {
-    books: []
+    myBooks: [],
+    booksFound : [],
+    searchQuery : "" 
   }
 
   componentDidMount() {
     BooksAPI
       .getAll()
-      .then(books => this.setState({books}));
+      .then(myBooks => this.setState({myBooks}));
   }
 
   changeShelf = (book, shelfName) => {
     return BooksAPI
       .update(book, shelfName)
       .then(result => BooksAPI.getAll())
-      .then(books => {
-        this.setState({books});
-        return books;
+      .then(myBooks => {
+        this.setState({myBooks});
+        if (this.state.searchQuery.length > 0) {
+          this.searchBook(this.state.searchQuery);
+        }
       });
   }
 
   searchBook = (query) => {
-    BooksAPI
-      .search(query, 1)
-      .then(books => {
-        console.log(books);
-      })
+    this.setState({searchQuery : query});
+
+    if (query.length === 0) {
+      this.setState({booksFound : []});
+    }
+
+      BooksAPI
+          .search(query)
+          .then(booksFound => {
+            if (!Array.isArray(booksFound)) {
+              this.setState({booksFound : []})
+              return [];
+            }
+
+            let newBooksFound =  booksFound.map((bookFound) => {
+              for (let book of this.state.myBooks) {
+                if (book.id === bookFound.id) {
+                  return book;
+                }
+              } 
+              return bookFound;
+            });
+
+            this.setState({booksFound : newBooksFound})
+          })
+    
   }
 
   render() {
@@ -41,13 +66,18 @@ class BooksApp extends React.Component {
           exact
           path="/"
           render={() => {
-          return <BookListBox books={this.state.books} changeShelf={this.changeShelf} />;
+          return <BookListBox books={this.state.myBooks} changeShelf={this.changeShelf} />;
         }}/>
 
         <Route
           path="/search"
           render={() => {
-          return <SearchBox/>;
+          return <SearchBox 
+              searchBook={this.searchBook} 
+              booksFound={this.state.booksFound} 
+              query={this.state.searchQuery} 
+              changeShelf={this.changeShelf}
+              />;
         }}/>
       </div>
     )
