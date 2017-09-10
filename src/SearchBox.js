@@ -20,6 +20,13 @@ class SearchBox extends Component {
               </div>
             </div>
             <div className="search-books-results">
+              {this.props.booksFound.length === 0 && (
+                  <p className="list-empty-info" >No results found.</p>
+              )}
+
+              {this.props.booksFound.length > 0 && (
+                  <p className="list-empty-info" >{this.props.booksFound.length} results found.</p>
+              )}
               <ol className="books-grid">
                 {this.props.booksFound.map((book) => (
                   <li key={book.id}>
