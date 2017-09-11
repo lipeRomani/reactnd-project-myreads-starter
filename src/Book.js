@@ -20,7 +20,7 @@ class Book extends Component {
                         height: 193,
                         backgroundImage: `url('${this.props.book.imageLinks ? this.props.book.imageLinks.smallThumbnail : ""}')`
                     }}></div>
-                    <div className="book-shelf-changer">
+                    <div className="book-shelf-changer" style={(this.props.book.shelf && this.props.book.shelf !== 'none') ? {backgroundColor : 'orange'} : {}}>
                         <select value={this.props.book.shelf ? this.props.book.shelf : 'none' } onChange={this.handleChange}>
                             <option value="none" disabled>Move to...</option>
                             <option value="currentlyReading">Currently Reading</option>
