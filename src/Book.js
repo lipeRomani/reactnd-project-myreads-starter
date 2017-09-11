@@ -6,7 +6,6 @@ class Book extends Component {
     handleChange = e => {
         const shelfId = e.target.value;
         this.props.changeShelf(this.props.book, shelfId);
-
     }
 
     render() {
