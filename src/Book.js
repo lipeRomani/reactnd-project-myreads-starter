@@ -18,7 +18,7 @@ class Book extends Component {
                         style={{
                         width: 128,
                         height: 193,
-                        backgroundImage: `url('${this.props.book.imageLinks.smallThumbnail ? this.props.book.imageLinks.smallThumbnail : ""}')`
+                        backgroundImage: `url('${this.props.book.imageLinks ? this.props.book.imageLinks.smallThumbnail : ""}')`
                     }}></div>
                     <div className="book-shelf-changer">
                         <select value={this.props.book.shelf ? this.props.book.shelf : 'none' } onChange={this.handleChange}>
