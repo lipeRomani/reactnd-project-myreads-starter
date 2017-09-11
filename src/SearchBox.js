@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Book from "./Book";
+import If from "./If";
 
 class SearchBox extends Component {
 
@@ -20,13 +21,13 @@ class SearchBox extends Component {
               </div>
             </div>
             <div className="search-books-results">
-              {this.props.booksFound.length === 0 && (
-                  <p className="list-empty-info" >No results found.</p>
-              )}
+              <If test={this.props.booksFound.length === 0}>
+                <p className="list-empty-info" >No results found.</p>
+              </If> 
 
-              {this.props.booksFound.length > 0 && (
-                  <p className="list-empty-info" >{this.props.booksFound.length} results found.</p>
-              )}
+              <If test={this.props.booksFound.length > 0}>
+                <p className="list-empty-info" >{this.props.booksFound.length} results found.</p>
+              </If>
               <ol className="books-grid">
                 {this.props.booksFound.map((book) => (
                   <li key={book.id}>

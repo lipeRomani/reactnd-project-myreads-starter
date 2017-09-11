@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Book from './Book';
 import PropTypes from 'prop-types';
+import If from './If';
 
 class Shelf extends Component {
 
@@ -28,9 +29,9 @@ class Shelf extends Component {
             <div className="bookshelf">
                 <h2 className="bookshelf-title">{this.props.title} ({this.countBooks()})</h2>
                 <div className="bookshelf-books">
-                    {!this.hasBooks() && (
-                        <p className="list-empty-info" >No books in this shelf.</p>
-                    )}
+                    <If test={!this.hasBooks()}>
+                        <p className="list-empty-info" >No books in this shelf</p>
+                    </If>
                     <ol className="books-grid">
                         {this.props.books.map((book) => {
                             return (
