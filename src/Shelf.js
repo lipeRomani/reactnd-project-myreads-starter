@@ -35,7 +35,7 @@ class Shelf extends Component {
                         {this.props.books.map((book) => {
                             return (
                                 (book.shelf === this.props.shelfId && 
-                                    <li key={book.title}>
+                                    <li key={book.id}>
                                         <Book book={book} changeShelf={this.props.changeShelf} />
                                     </li>
                                 )
