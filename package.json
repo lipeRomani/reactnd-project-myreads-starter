@@ -9,13 +9,14 @@
     "react-router-dom": "^4.2.2"
   },
   "jest": {
+    "collectCoverageFrom" : [
+      "src/**/*.{js,jsx}",
+      "!src/index.js",
+      "!src/BookAPI.js",
+      "!src/registerServiceWorker.js"
+    ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
-    ],
-    "collectCoverageFrom": [
-      "src/**/*.js",
-      "!src/index.js",
-      "!src/registerServiceWorker.js"
     ]
   },
   "devDependencies": {
@@ -28,6 +29,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
+    "test:coverage": "react-scripts test --env=jsdom --coverage",
     "eject": "react-scripts eject"
   }
 }
