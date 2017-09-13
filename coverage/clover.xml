@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1505267946686" clover="3.2.0">
-  <project timestamp="1505267946687" name="All files">
-    <metrics statements="71" coveredstatements="20" conditionals="28" coveredconditionals="12" methods="33" coveredmethods="4" elements="132" coveredelements="36" complexity="0" loc="71" ncloc="71" packages="1" files="9" classes="9">
-      <file name="App.js" path="/Users/felipearomani/Documents/estudos/udacity/reactnd-project-myreads-starter/src/App.js">
+<coverage generated="1505337902894" clover="3.2.0">
+  <project timestamp="1505337902895" name="All files">
+    <metrics statements="71" coveredstatements="20" conditionals="28" coveredconditionals="13" methods="33" coveredmethods="4" elements="132" coveredelements="37" complexity="0" loc="71" ncloc="71" packages="1" files="9" classes="9">
+      <file name="App.js" path="/home/romani/Documentos/estudos/udacity/reactnd-project-myreads-starter/src/App.js">
         <metrics statements="24" coveredstatements="1" conditionals="8" coveredconditionals="0" methods="11" coveredmethods="1"/>
         <line num="16" count="0" type="stmt"/>
         <line num="18" count="0" type="stmt"/>
@@ -29,19 +29,19 @@
         <line num="69" count="0" type="stmt"/>
         <line num="75" count="0" type="stmt"/>
       </file>
-      <file name="Book.js" path="/Users/felipearomani/Documents/estudos/udacity/reactnd-project-myreads-starter/src/Book.js">
-        <metrics statements="4" coveredstatements="4" conditionals="10" coveredconditionals="9" methods="2" coveredmethods="2"/>
+      <file name="Book.js" path="/home/romani/Documentos/estudos/udacity/reactnd-project-myreads-starter/src/Book.js">
+        <metrics statements="4" coveredstatements="4" conditionals="10" coveredconditionals="10" methods="2" coveredmethods="2"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
-        <line num="12" count="7" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
         <line num="39" count="2" type="stmt"/>
       </file>
-      <file name="BookListBox.js" path="/Users/felipearomani/Documents/estudos/udacity/reactnd-project-myreads-starter/src/BookListBox.js">
+      <file name="BookListBox.js" path="/home/romani/Documentos/estudos/udacity/reactnd-project-myreads-starter/src/BookListBox.js">
         <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="8" count="0" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
       </file>
-      <file name="BooksAPI.js" path="/Users/felipearomani/Documents/estudos/udacity/reactnd-project-myreads-starter/src/BooksAPI.js">
+      <file name="BooksAPI.js" path="/home/romani/Documentos/estudos/udacity/reactnd-project-myreads-starter/src/BooksAPI.js">
         <metrics statements="20" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="11" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
@@ -64,11 +64,11 @@
         <line num="43" count="0" type="stmt"/>
         <line num="44" count="0" type="stmt"/>
       </file>
-      <file name="If.js" path="/Users/felipearomani/Documents/estudos/udacity/reactnd-project-myreads-starter/src/If.js">
+      <file name="If.js" path="/home/romani/Documentos/estudos/udacity/reactnd-project-myreads-starter/src/If.js">
         <metrics statements="1" coveredstatements="1" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="3" type="cond" truecount="2" falsecount="0"/>
       </file>
-      <file name="SearchBox.js" path="/Users/felipearomani/Documents/estudos/udacity/reactnd-project-myreads-starter/src/SearchBox.js">
+      <file name="SearchBox.js" path="/home/romani/Documentos/estudos/udacity/reactnd-project-myreads-starter/src/SearchBox.js">
         <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
@@ -76,7 +76,7 @@
         <line num="33" count="0" type="stmt"/>
         <line num="44" count="1" type="stmt"/>
       </file>
-      <file name="Shelf.js" path="/Users/felipearomani/Documents/estudos/udacity/reactnd-project-myreads-starter/src/Shelf.js">
+      <file name="Shelf.js" path="/home/romani/Documentos/estudos/udacity/reactnd-project-myreads-starter/src/Shelf.js">
         <metrics statements="12" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
@@ -91,11 +91,11 @@
         <line num="37" count="0" type="stmt"/>
         <line num="52" count="1" type="stmt"/>
       </file>
-      <file name="index.js" path="/Users/felipearomani/Documents/estudos/udacity/reactnd-project-myreads-starter/src/index.js">
+      <file name="index.js" path="/home/romani/Documentos/estudos/udacity/reactnd-project-myreads-starter/src/index.js">
         <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="0" type="stmt"/>
       </file>
-      <file name="setupTests.js" path="/Users/felipearomani/Documents/estudos/udacity/reactnd-project-myreads-starter/src/setupTests.js">
+      <file name="setupTests.js" path="/home/romani/Documentos/estudos/udacity/reactnd-project-myreads-starter/src/setupTests.js">
         <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="3" type="stmt"/>
         <line num="6" count="3" type="stmt"/>

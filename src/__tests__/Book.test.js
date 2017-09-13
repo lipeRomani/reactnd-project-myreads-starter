@@ -64,3 +64,22 @@ it ("test the color of the menu if the book is off the shelf", () => {
     const wrapper = mount(<Book book={book} changeShelf={changeShelf} />);
     expect(wrapper.find(".book-shelf-changer").props().style.backgroundColor).toEqual(undefined);
 }); 
+
+it ("test book without image cover", () => {
+    const book = {};
+    const changeShelf = jest.fn();
+    const wrapper = mount(<Book book={book} changeShelf={changeShelf} />);
+    expect(wrapper.find(".book-cover").props().style.backgroundImage).toEqual("url(\'\')")
+});
+
+it ("test book with image cover", () => {
+    const imageUrl = "teste.jpg";
+    const book = {
+        imageLinks : {
+            smallThumbnail : imageUrl
+        }
+    };
+    const changeShelf = jest.fn();
+    const wrapper = mount(<Book book={book} changeShelf={changeShelf} />);
+    expect(wrapper.find(".book-cover").props().style.backgroundImage).toEqual(`url(\'${imageUrl}\')`)
+});
