@@ -6,7 +6,7 @@ import If from './If';
 class Shelf extends Component {
 
     hasBooks() {
-        for (const book of  this.props.books) {
+        for (const book of this.props.books) {
             if (book.shelf === this.props.shelfId) {
                 return true
             }

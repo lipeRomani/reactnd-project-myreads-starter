@@ -20,28 +20,28 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">8.33% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>1/12</span>
+        <span class='fraction'>12/12</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">66.67% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>0/6</span>
+        <span class='fraction'>4/6</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">0% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>0/4</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">8.33% </span>
+        <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/12</span>
+        <span class='fraction'>12/12</span>
       </div>
     </div>
   </div>
-  <div class='status-line low'></div>
+  <div class='status-line high'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -109,38 +109,35 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -152,7 +149,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -166,27 +166,27 @@ import If from './If';
 &nbsp;
 class Shelf extends Component {
 &nbsp;
-<span class="fstat-no" title="function not covered" >    ha</span>sBooks() {
-<span class="cstat-no" title="statement not covered" >        for (const book of  this.props.books) {</span>
-<span class="cstat-no" title="statement not covered" >            if (book.shelf === this.props.shelfId) {</span>
-<span class="cstat-no" title="statement not covered" >                return true</span>
+    hasBooks() {
+        for (const book of this.props.books) {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (book.shelf === this.props.shelfId) {
+                return true
             }
         }
-<span class="cstat-no" title="statement not covered" >        return false;</span>
+        return false;
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    co</span>untBooks() {
-        let count = <span class="cstat-no" title="statement not covered" >0;</span>
-<span class="cstat-no" title="statement not covered" >        for (const book of  this.props.books) {</span>
-<span class="cstat-no" title="statement not covered" >            if (book.shelf === this.props.shelfId) {</span>
-<span class="cstat-no" title="statement not covered" >                count++;</span>
+    countBooks() {
+        let count = 0;
+        for (const book of  this.props.books) {
+            <span class="missing-if-branch" title="else path not taken" >E</span>if (book.shelf === this.props.shelfId) {
+                count++;
             }
         }
-<span class="cstat-no" title="statement not covered" >        return count;</span>
+        return count;
     }
 &nbsp;
-<span class="fstat-no" title="function not covered" >    re</span>nder() {
-<span class="cstat-no" title="statement not covered" >        return (</span>
+    render() {
+        return (
             &lt;div className="bookshelf"&gt;
                 &lt;h2 className="bookshelf-title"&gt;{this.props.title} ({this.countBooks()})&lt;/h2&gt;
                 &lt;div className="bookshelf-books"&gt;
@@ -194,8 +194,8 @@ class Shelf extends Component {
                         &lt;p className="list-empty-info" &gt;No books in this shelf&lt;/p&gt;
                     &lt;/If&gt;
                     &lt;ol className="books-grid"&gt;
-                        {this.props.books.map(<span class="fstat-no" title="function not covered" >(b</span>ook) =&gt; {
-<span class="cstat-no" title="statement not covered" >                            return (</span>
+                        {this.props.books.map((book) =&gt; {
+                            return (
                                 (book.shelf === this.props.shelfId &amp;&amp; 
                                     &lt;li key={book.id}&gt;
                                         &lt;Book book={book} changeShelf={this.props.changeShelf} /&gt;
@@ -223,7 +223,7 @@ export default Shelf;</pre></td></tr>
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Sep 13 2017 18:25:02 GMT-0300 (BRT)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Sep 13 2017 21:23:14 GMT-0300 (-03)
 </div>
 </div>
 <script src="prettify.js"></script>
